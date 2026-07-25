@@ -7,5 +7,5 @@ contact_links:
     url: https://github.com/mailora/.github/blob/main/SECURITY.md
     about: Report privately. Do not open a public issue.
   - name: Questions and ideas
-    url: https://github.com/orgs/mailora/discussions
+    url: https://github.com/mailora/.github/discussions
     about: For "how do I…" and open-ended discussion rather than a bug.
