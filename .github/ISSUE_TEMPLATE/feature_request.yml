@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest something the tool should do and does not.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These are deliberately small tools. A request that keeps them a single binary with no new
+        runtime dependency has a much better chance.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - Mailora Send
+        - Mailora Trap
+        - Mailora Temp
+        - Mailora Mail
+        - More than one
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what stops you? Describe the situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like it to do
+      description: If you have a concrete shape in mind — a flag, an endpoint, a field — say so.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: Workarounds, other tools, or why the existing options do not cover it.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: This does not require a new runtime dependency or an external service.

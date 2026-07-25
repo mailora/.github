@@ -1,0 +1,73 @@
+name: Bug report
+description: Something behaves differently from what the docs say.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report security vulnerabilities here — see [SECURITY.md](https://github.com/mailora/.github/blob/main/SECURITY.md).
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - Mailora Send
+        - Mailora Trap
+        - Mailora Temp
+        - Mailora Mail
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of the binary's `version` command, or the image tag you ran.
+      placeholder: v0.0.1-alpha
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The smallest set of steps that shows it. Commands, config and the request you sent are more useful than a description of them.
+      placeholder: |
+        1. Run `mailora-trap -db data/mail.db`
+        2. swaks --to a@b.test --server localhost:1025
+        3. Open http://localhost:8025 — the message is not listed
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant server output. Redact keys, tokens and real addresses.
+      render: text
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, and how you ran it (binary, Docker, from source).
+      placeholder: Ubuntu 24.04, arm64, ghcr.io image
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I am on the latest release.
+          required: true
+        - label: I searched existing issues.
+          required: true
