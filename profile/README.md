@@ -1,4 +1,7 @@
-<img src="logo.png" alt="Mailora" width="96" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="logo-dark.png" />
+  <img src="logo-light.png" alt="Mailora" width="96" />
+</picture>
 
 # Mailora
 
