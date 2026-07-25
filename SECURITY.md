@@ -9,7 +9,7 @@ Report privately, either way:
 
 1. **GitHub private vulnerability reporting** — go to the affected repository, open the **Security**
    tab, and click **Report a vulnerability**. This is preferred.
-2. **Email** — [sumantablog@gmail.com](mailto:sumantablog@gmail.com), subject line starting
+2. **Email** — [mailorahq@gmail.com](mailto:mailorahq@gmail.com), subject line starting
    `SECURITY:`.
 
 Useful things to include: the affected project and version, what an attacker gets, and the smallest
